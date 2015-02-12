@@ -62,7 +62,7 @@ clang++ -std=c++11 -o objectOrientation objectOrientation.cpp
 #       rather than NULL. It also enables features like the compact
 #       for loop syntax.
 
-clang++ -std=c++11 -o stlIntro.cpp stlIntro
+clang++ -std=c++11 -o stlIntro stlIntro.cpp
 
 # Invoke the stlIntro executable passing the required command
 # line arguments, which are the names of the input and output

@@ -55,7 +55,8 @@ public :
 };
 
 void usingThisDemo(){ // Invoke with option 0.
-
+  std::cout << "usingThisDemo():\n" << std::endl;
+  
   /* Declare and default-initialize an instance of the UsingTheThisPointer
    * class.
    */
@@ -77,12 +78,16 @@ void usingThisDemo(){ // Invoke with option 0.
 class MinimalCompleteClass{
   /* A code block is required for a complete definition.
    *
-   * The C++ compiler will AUTOMATICALLY provide a DEFAULT CONSTRUCTOR
+   * IF NO OTHER CONSTRUCTORS OR DESTRUCTORS ARE DEFINED, The C++ 
+   * compiler will AUTOMATICALLY provide a DEFAULT CONSTRUCTOR
    * and DESTRUCTOR.
+   *
+   * The DEFAULT CONSTRUCTOR will DEFAULT-INITIALIZE member data by 
+   * calling their DEFAULT CONSTRUCTORS, IF THEY EXIST.
    */
 };
 
-void minimalClassDemo(){
+void minimalClassDemo(){ // Invoke with option 1.
   std::cout << "minimalClassDemo():\n" << std::endl;
 
   /* Legal DECLARATION of a variable with the MinimalCompleteClass type-
@@ -105,6 +110,8 @@ void minimalClassDemo(){
    * calling the class constructor. This is analogous to using the 
    * CONSTRUCTOR-STYLE initialization syntax for BUILT-IN types e.g.
    */
+  int intVar(42);
+  std::cout << "inVar => " << intVar << std::endl;
 
 } // end of minimalClassDemo()
 
@@ -116,13 +123,6 @@ public :
   // public member data - two integer values
   int intMember1;
   int intMember2;
-  
-  /* The C++ compiler will AUTOMATICALLY provide a DEFAULT CONSTRUCTOR
-   * and DESTRUCTOR.
-   *
-   * The DEFAULT CONSTRUCTOR will DEFAULT-INITIALIZE member data by calling
-   * their DEFAULT CONSTRUCTORS.
-   */
 
   /* In class definition of non-default constructor accepting two integer 
    * variables.
@@ -134,7 +134,7 @@ public :
   
 };
 
-void constructorClassDemo(){ // Invoke with option 1.
+void constructorClassDemo(){ // Invoke with option 2.
   std::cout << "constructorClassDemo():\n" << std::endl;
 
   /* Legal DECLARATION and CONSTRUCTOR-STYLE initialization of a variable 
@@ -143,7 +143,7 @@ void constructorClassDemo(){ // Invoke with option 1.
   ClassWithConstructor constructorClassVar(1, 2);
 
   /* Legal DECLARATION of a constant with the CompleteClass type-
-   * specifier. Recall, this statement calls the DEFAULT CONSTRUCTOR.
+   * specifier.
    */
   const ClassWithConstructor constructorClassConst(3, 4);
 
@@ -206,7 +206,9 @@ void constructorClassDemo(){ // Invoke with option 1.
  * "+" operator performs string concatenation
  */
 
-void stringConcatDemo(){ // Invoke with option 2.
+void stringConcatDemo(){ // Invoke with option 3.
+  std::cout << "stringConcatDemo():\n" << std::endl;
+  
   // Declare and initialize two instances of std::string
   std::string leftHandSide("Computational ");
   std::string rightHandSide("Physics");
@@ -546,6 +548,8 @@ public :
 
 void inheritenceDemo(){ // Invoke with option 5. 
 
+  std::cout << "inheritenceDemo():\n" << std::endl;
+  
   // Instantiate Printer, PhotoCopier and ColorPrinter objects
   PrinterClass printer;
   PhotoCopierClass photoCopier;
@@ -705,7 +709,9 @@ public :
 
 };
 
-void baseInitDemo(){ // Invoke with option 6. 
+void baseInitDemo(){ // Invoke with option 6.
+  std::cout << "baseInitDemo():\n" << std::endl;
+
   // IMPLICITLY invoke DEFAULT CONSTRUCTORS.
   ChargedMassiveParticle darkMatter;
     

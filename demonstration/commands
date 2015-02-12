@@ -1,0 +1,64 @@
+# Commands for Lecture 5 C++ demonstrations
+# =========================================
+
+# Compile objectOrientation.cpp, which demonstrates:
+# 1) Use of the "this" pointer.
+# 2) Conditions under which the C++ compiler will provide a default
+#    class constructor.
+# 3) The operation of the automatically generated assignment operator
+#    for user defined classes.
+# 4) Overloading of the "+" operator for the std::string type to
+#    perform string concatenation.
+# 5) Overloading of the automatically generated assignment operator
+#    for user-defined types to implement deep copying semantics.
+# 6) How to derive subclasses from base classes and implement inheritance
+#    relationships.
+# 7) How to properly initialize the base class within a the constructor
+#    of a derived class.
+# 8) How to use the "switch" flow control structure.
+
+clang++ -o objectOrientation objectOrientation.cpp
+
+# Invoke the objectOrientation executable with different command
+# line arguments to run specific demonstration examples:
+
+# Invoke the usingThisDemo() function:
+./objectOrientation 0
+
+# Invoke the minimalClassDemo() function:
+./objectOrientation 1
+
+# Invoke the constructorClassDemo() function:
+./objectOrientation 2
+
+# Invoke the stringConcatDemo() function:
+./objectOrientation 3
+
+# Invoke the assignmentOperatorOverloadDemo() function:
+./objectOrientation 4
+
+# Invoke the inheritenceDemo() function:
+./objectOrientation 5
+
+# Invoke the baseInitDemo() function:
+./objectOrientation 6
+
+# =========================================================
+
+# Compile stlIntro.cpp, which demonstrates:
+#
+# 1) Basic use of the STL std::vector container class.
+# 2) Basic textual file input and output using the STL stream
+#    API.
+# 3) Basic use of STL iterators to process the elements of a
+#    std::vector container.
+# 3) Use of the STL std::sort algorithm to sort the elements of
+#    an STL std::vector (applies to any STL container).
+
+clang++ -o stlIntro.cpp stlIntro
+
+# Invoke the stlIntro executable passing the required command
+# line arguments, which are the names of the input and output
+# files respectively.
+
+./stlIntro unsortedNumbers sortedNumbers

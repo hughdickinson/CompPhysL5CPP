@@ -17,7 +17,10 @@
 #    of a derived class.
 # 8) How to use the "switch" flow control structure.
 
-clang++ -o objectOrientation objectOrientation.cpp
+# NOTE: The "-std=c++11" flag is required in order to use "nullptr"
+#       rather than NULL.
+
+clang++ -std=c++11 -o objectOrientation objectOrientation.cpp
 
 # Invoke the objectOrientation executable with different command
 # line arguments to run specific demonstration examples:
@@ -55,7 +58,11 @@ clang++ -o objectOrientation objectOrientation.cpp
 # 3) Use of the STL std::sort algorithm to sort the elements of
 #    an STL std::vector (applies to any STL container).
 
-clang++ -o stlIntro.cpp stlIntro
+# NOTE: The "-std=c++11" flag is required in order to use "nullptr"
+#       rather than NULL. It also enables features like the compact
+#       for loop syntax.
+
+clang++ -std=c++11 -o stlIntro.cpp stlIntro
 
 # Invoke the stlIntro executable passing the required command
 # line arguments, which are the names of the input and output
